@@ -1,13 +1,13 @@
 /*
- *  Copyright (c) 2014, Facebook, Inc. All rights reserved.
+ *  Copyright (c) 2014, Parse, LLC. All rights reserved.
  *
  *  You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  *  copy, modify, and distribute this software in source code or binary form for use
- *  in connection with the web services and APIs provided by Facebook.
+ *  in connection with the web services and APIs provided by Parse.
  *
- *  As with any software that integrates with the Facebook platform, your use of
- *  this software is subject to the Facebook Developer Principles and Policies
- *  [http://developers.facebook.com/policy/]. This copyright notice shall be
+ *  As with any software that integrates with the Parse platform, your use of
+ *  this software is subject to the Parse Terms of Service
+ *  [https://www.parse.com/about/terms]. This copyright notice shall be
  *  included in all copies or substantial portions of the software.
  *
  *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -24,7 +24,6 @@ package com.parse.loginsample.codecustomization;
 import android.app.Application;
 
 import com.parse.Parse;
-import com.parse.ParseFacebookUtils;
 import com.parse.ParseTwitterUtils;
 
 public class SampleApplication extends Application {
@@ -36,10 +35,6 @@ public class SampleApplication extends Application {
         getString(R.string.parse_client_key));
 
     Parse.setLogLevel(Parse.LOG_LEVEL_DEBUG);
-
-    // Optional - If you don't want to allow Facebook login, you can
-    // remove this line (and other related ParseFacebookUtils calls)
-    ParseFacebookUtils.initialize(getString(R.string.facebook_app_id));
 
     // Optional - If you don't want to allow Twitter login, you can
     // remove this line (and other related ParseTwitterUtils calls)
